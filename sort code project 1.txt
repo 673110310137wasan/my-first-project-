@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* รีเซ็ตค่าพื้นฐาน */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Helvetica Neue', Arial;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ส่วนหัว (Header) */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* กล่องเนื้อหาหลัก */
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* สไตล์ของแต่ละ Section */
+        section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        section h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        /* ทักษะ (Skills) */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background-color: #e1f5fe;
+            color: #0288d1;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* ผลงาน (Projects) */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .project-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-info {
+            padding: 1rem;
+        }
+
+        .project-info h3 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        /* การติดต่อ (Contact) */
+        .contact-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* ส่วนท้าย (Footer) */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img">
+        <h1>สมชาย สายโค้ด</h1>
+        <p>Full-Stack Developer & Designer</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="about">
+            <h2>เกี่ยวกับฉัน</h2>
+            <p>สวัสดีครับ! ฉันเป็นนักพัฒนาเว็บไซต์ที่หลงใหลในการสร้างสรรค์ Web Application ที่ใช้งานง่าย และมีประสิทธิภาพ มีประสบการณ์ในการเขียนโค้ดและออกแบบหน้าตาเว็บให้ตอบโจทย์ผู้ใช้งาน</p>
+        </section>
+
+        <section id="skills">
+            <h2>ทักษะความสามารถ</h2>
+            <div class="skills-container">
+                <span class="skill-tag">HTML5 / CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">SQL / NoSQL</span>
+                <span class="skill-tag">UI/UX Design</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>ผลงานของฉัน</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>E-Commerce Website</h3>
+                        <p>ระบบร้านค้าออนไลน์ รองรับการตะกร้าสินค้า และตัดบัตรเครดิต</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Task Management App</h3>
+                        <p>แอปพลิเคชันช่วยจัดการงานประจำวัน พร้อมระบบแจ้งเตือน</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Weather Dashboard</h3>
+                        <p>เว็บรายงานสภาพอากาศดึงข้อมูลจาก OpenWeather API แบบ Real-time</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>ช่องทางการติดต่อ</h2>
+            <p>หากสนใจร่วมงานหรือสอบถามข้อมูลเพิ่มเติม สามารถติดต่อได้ที่ช่องทางด้านล่างนี้ครับ</p>
+            <br>
+            <div class="contact-links">
+                <a href="mailto:somchai@email.com">📧 Email</a>
+                <a href="https://github.com" target="_blank">💻 GitHub</a>
+                <a href="https://linkedin.com" target="_blank">👔 LinkedIn</a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Somchai Dev. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
